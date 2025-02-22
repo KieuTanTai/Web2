@@ -19,6 +19,14 @@ function returnHomepage(elementsObj) {
      );
 }
 
+// test php
+function testPHP(elementsObj) {
+     (elementsObj.getTestPHP()).addEventListener("click", Bridge.debounce(() => {
+          let now = window.location.href.toString();
+          window.location.href = now.split(now.lastIndexOf("/")) + "test.php";
+     }, 200, "test-php"))
+}
+
 // header navigation button on mobile
 function smNavigationMenu(elementsObj) {
      let navigateBtn = elementsObj.getMobileNavigate();
@@ -541,4 +549,4 @@ function updateListAccount(newInfo) {
 }
 
 export { cancelButtons, accountEvents, staticContents, historyNavigate, setQuantityBox, returnHomepage, trackingNavigate, smNavigationMenu };
-export { showOrderContent, showTracking, showLogin, showRegister, showForgotPassword, userDetail };
+export { showOrderContent, showTracking, showLogin, showRegister, showForgotPassword, userDetail, testPHP };

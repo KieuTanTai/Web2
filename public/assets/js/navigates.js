@@ -56,9 +56,9 @@ function popStateHandler() {
 
 function forbiddenDOM() {
      let href = location.href;
-     let path = href.slice(href.lastIndexOf("/HTML/") + 5, href.length);
+     let path = href.slice(href.lastIndexOf("/public/") + 7, href.length);
      if (path.includes("header_footer"))
-          window.location.replace(`${location.href.slice(0, location.href.lastIndexOf("/HTML/") + 6)}`);
+          window.location.replace(`${location.href.slice(0, location.href.lastIndexOf("/public/") + 7)}`);
 }
 
 export { popStateHandler, execQueryHandler, forbiddenDOM, sleep }
