@@ -23,7 +23,11 @@ function returnHomepage(elementsObj) {
 function testPHP(elementsObj) {
      (elementsObj.getTestPHP()).addEventListener("click", Bridge.debounce(() => {
           let now = window.location.href.toString();
-          window.location.href = now.split(now.lastIndexOf("/")) + "test.php";
+          let newLink = now.split(now.lastIndexOf("/") + 1)[0];
+          console.log(newLink);
+          if (now.includes("index.php"))
+               newLink = newLink.replace("index.php", "");
+          window.location.href = newLink + "test.php";
      }, 200, "test-php"))
 }
 
