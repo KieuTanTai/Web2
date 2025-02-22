@@ -1,0 +1,50 @@
+# Build and Release Folders
+bin-debug/
+bin-release/
+[Oo]bj/
+[Bb]in/
+
+# Other files and folders
+.settings/
+
+# Executables
+*.swf
+*.air
+*.ipa
+*.apk
+
+# Ignore thư mục hệ thống và IDE
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.log
+
+# Ignore các file môi trường và cấu hình
+.env
+.htaccess
+
+# Ignore thư mục vendor (dùng Composer)
+vendor/
+
+# Ignore cache và logs
+storage/
+logs/
+cache/
+
+# Ignore file tải lên (uploads)
+public/uploads/
+
+# Ignore các tệp tạm và backup
+*.bak
+*.swp
+*.swo
+*.tmp
+
+# Ignore database dump
+*.sql
+*.sqlite
+*.db
+
+# Ignore các package lock files (tùy chọn)
+composer.lock
