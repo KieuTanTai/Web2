@@ -504,7 +504,7 @@
 
 #fs-container .heading #fs-label {
   padding: 1em 5em;
-  background: url("../Images/QC/label-flashsale.svg") top left / cover no-repeat;
+  background: url("../images/ads/label-flashsale.svg") top left / cover no-repeat;
 }
 
 #fs-container .heading .fs-countdown {
@@ -609,7 +609,7 @@
   color: var(--primary-white);
   font-size: var(--font-size-14);
   transform: translate(0.5em, 0);
-  background: url("../Images/QC/discount.png") center / contain no-repeat;
+  background: url("../images/ads/discount.png") center / contain no-repeat;
 }
 
 .block-product .product-image img {

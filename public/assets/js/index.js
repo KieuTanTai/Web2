@@ -1,16 +1,16 @@
 "use strict";
-import * as Storage from "./Storage.js";
-import * as Products from "./Products.js";
-import * as Interface from "./Interface.js";
-import * as Bridge from "./Bridge.js";
-import * as Actions from "./Actions.js";
-import * as FlashSales from "./FlashSales.js";
-import * as Navigate from "./Navigate.js";
+import * as Storage from "./storage.js";
+import * as Products from "./product.js";
+import * as Interface from "./interfaces.js";
+import * as Bridge from "./bridges.js";
+import * as Actions from "./action.js";
+import * as FlashSales from "./flashsale.js";
+import * as Navigate from "./navigates.js";
 import * as Search from "./search.js";
-import * as Login from "./Login.js";
-import * as Register from "./Register.js";
-import * as Slides from "./Slides.js";
-import * as Cart from "./Cart.js";
+import * as Login from "./login.js";
+import * as Register from "./registers.js";
+import * as Slides from "./slides.js";
+import * as Cart from "./carts.js";
 import * as Pages from "./pages.js";
 
 document.addEventListener("DOMContentLoaded", () => {

@@ -34,6 +34,7 @@ cache/
 merge.py
 remove.py
 push.py
+fiveserver.config.js
 
 # Ignore file tải lên (uploads)
 public/uploads/
