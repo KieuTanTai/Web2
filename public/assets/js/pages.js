@@ -14,7 +14,7 @@ function handleCategoryNavigation() {
             const parentSection = button.closest('section');
             if (parentSection && parentSection.id) {
                 const categoryId = parentSection.id;
-                window.location.href = `index.html?category=${categoryId}`;
+                window.location.href = `index.php?category=${categoryId}`;
             }
         });
     });
@@ -25,7 +25,7 @@ function handleCategoryNavigation() {
             event.preventDefault();
             const categoryType = item.querySelector("a.flex.full-width");
             let type = categoryType ? categoryType.getAttribute("title") : "";
-            window.location.href = `index.html?category=${type}`;
+            window.location.href = `index.php?category=${type}`;
         })
         ));
 }
