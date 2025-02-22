@@ -28,15 +28,15 @@ Thumbs.db
 vendor/
 
 # Ignore cache và logs
-!storage/
-!logs/
-!cache/
+storage/
+logs/
+cache/
 merge.py
 remove.py
 push.py
 
 # Ignore file tải lên (uploads)
-!public/uploads/
+public/uploads/
 
 # Ignore các tệp tạm và backup
 *.bak
