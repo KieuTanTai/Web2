@@ -31,6 +31,7 @@ vendor/
 storage/
 logs/
 cache/
+merge.py
 
 # Ignore file tải lên (uploads)
 public/uploads/
