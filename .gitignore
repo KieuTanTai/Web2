@@ -33,6 +33,7 @@ logs/
 cache/
 merge.py
 remove.py
+push.py
 
 # Ignore file tải lên (uploads)
 public/uploads/
