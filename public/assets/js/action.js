@@ -439,7 +439,7 @@ function userDetail(elementsObj) {
      let userOrders = elementsObj.getUserOrders();
      // for checking account have order or not
      let ordersList = JSON.parse(localStorage.getItem("donhang"));
-     if (!ordersList) return;
+     if (!ordersList) ordersList = [];
 
      let loginAccount = JSON.parse(sessionStorage.getItem("hasLoginAccount"));
      let customer = ordersList.find((order) => order.id_khachhang === loginAccount.userID);
