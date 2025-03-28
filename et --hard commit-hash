@@ -1,0 +1,97 @@
+[33m262a24c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mgopcode2[m[33m)[m HEAD@{0}: checkout: moving from duylam to gopcode2
+[33me1c64fa[m[33m ([m[1;32mduylam[m[33m)[m HEAD@{1}: checkout: moving from gopcode2 to duylam
+[33m262a24c[m[33m ([m[1;36mHEAD[m[33m -> [m[1;32mgopcode2[m[33m)[m HEAD@{2}: commit (merge): them ten nguoi dung vao header
+[33mb43392c[m HEAD@{3}: checkout: moving from lam to gopcode2
+[33m17bedd0[m[33m ([m[1;32mlam[m[33m)[m HEAD@{4}: checkout: moving from gopcode2 to lam
+[33mb43392c[m HEAD@{5}: commit: d
+[33ma2a42ac[m HEAD@{6}: checkout: moving from gopcodes1 to gopcode2
+[33mb6d195a[m[33m ([m[1;32mgopcodes1[m[33m)[m HEAD@{7}: checkout: moving from gopcode2 to gopcodes1
+[33ma2a42ac[m HEAD@{8}: commit: d
+[33m90161da[m HEAD@{9}: pull: Fast-forward
+[33m223c527[m HEAD@{10}: checkout: moving from gopcodes1 to gopcode2
+[33mb6d195a[m[33m ([m[1;32mgopcodes1[m[33m)[m HEAD@{11}: checkout: moving from gopcode2 to gopcodes1
+[33m223c527[m HEAD@{12}: commit: them anh header
+[33m4784b9d[m HEAD@{13}: checkout: moving from gopcodes1 to gopcode2
+[33mb6d195a[m[33m ([m[1;32mgopcodes1[m[33m)[m HEAD@{14}: commit: a
+[33m67bde99[m HEAD@{15}: checkout: moving from gopcodes1 to gopcodes1
+[33m67bde99[m HEAD@{16}: commit: a
+[33m0cda3b4[m HEAD@{17}: commit: check dnag ki dang nhap
+[33m54beecd[m HEAD@{18}: commit: check dangki dangnhap
+[33m25a38ae[m HEAD@{19}: commit: dang ki
+[33mb064e1c[m HEAD@{20}: pull origin gopcodes1: Merge made by the 'ort' strategy.
+[33medb2f00[m HEAD@{21}: checkout: moving from gopcodes1 to gopcodes1
+[33medb2f00[m HEAD@{22}: checkout: moving from duylam to gopcodes1
+[33me1c64fa[m[33m ([m[1;32mduylam[m[33m)[m HEAD@{23}: checkout: moving from duylam to duylam
+[33me1c64fa[m[33m ([m[1;32mduylam[m[33m)[m HEAD@{24}: checkout: moving from kiet to duylam
+[33m76c4095[m[33m ([m[1;32mkiet[m[33m)[m HEAD@{25}: checkout: moving from lam to kiet
+[33m17bedd0[m[33m ([m[1;32mlam[m[33m)[m HEAD@{26}: checkout: moving from kiet to lam
+[33m76c4095[m[33m ([m[1;32mkiet[m[33m)[m HEAD@{27}: commit: fix
+[33mb928c32[m HEAD@{28}: pull: Fast-forward
+[33m3ef2a46[m HEAD@{29}: checkout: moving from duylam to kiet
+[33me1c64fa[m[33m ([m[1;32mduylam[m[33m)[m HEAD@{30}: checkout: moving from lam to duylam
+[33m17bedd0[m[33m ([m[1;32mlam[m[33m)[m HEAD@{31}: commit (merge): xem
+[33m73a4533[m HEAD@{32}: commit: fix
+[33m07410ed[m HEAD@{33}: checkout: moving from kiet to lam
+[33m3ef2a46[m HEAD@{34}: pull: Fast-forward
+[33m3ddee02[m HEAD@{35}: checkout: moving from gopcodes1 to kiet
+[33medb2f00[m HEAD@{36}: commit: fix some
+[33mec5ca0f[m HEAD@{37}: commit: header
+[33mcf73324[m HEAD@{38}: checkout: moving from duylam to gopcodes1
+[33me1c64fa[m[33m ([m[1;32mduylam[m[33m)[m HEAD@{39}: checkout: moving from main to duylam
+[33m6a5c172[m[33m ([m[1;32mmain[m[33m)[m HEAD@{40}: checkout: moving from lam to main
+[33m07410ed[m HEAD@{41}: checkout: moving from gopcodes1 to lam
+[33mcf73324[m HEAD@{42}: checkout: moving from lam to gopcodes1
+[33m07410ed[m HEAD@{43}: checkout: moving from main to lam
+[33m6a5c172[m[33m ([m[1;32mmain[m[33m)[m HEAD@{44}: checkout: moving from duylam to main
+[33me1c64fa[m[33m ([m[1;32mduylam[m[33m)[m HEAD@{45}: commit: login
+[33m9350d8b[m[33m ([m[1;31morigin/duylam[m[33m)[m HEAD@{46}: checkout: moving from main to duylam
+[33m6a5c172[m[33m ([m[1;32mmain[m[33m)[m HEAD@{47}: checkout: moving from duylam to main
+[33m9350d8b[m[33m ([m[1;31morigin/duylam[m[33m)[m HEAD@{48}: checkout: moving from gopcodes1 to duylam
+[33mcf73324[m HEAD@{49}: commit: login
+[33m5df0bec[m HEAD@{50}: commit: gop code s1
+[33m9350d8b[m[33m ([m[1;31morigin/duylam[m[33m)[m HEAD@{51}: checkout: moving from duylam to gopcodes1
+[33m9350d8b[m[33m ([m[1;31morigin/duylam[m[33m)[m HEAD@{52}: commit: mvc t
+[33m623fbaa[m HEAD@{53}: checkout: moving from duylam to duylam
+[33m623fbaa[m HEAD@{54}: commit: router
+[33me798f0e[m HEAD@{55}: checkout: moving from lam to duylam
+[33m07410ed[m HEAD@{56}: checkout: moving from main to lam
+[33m6a5c172[m[33m ([m[1;32mmain[m[33m)[m HEAD@{57}: checkout: moving from lam to main
+[33m07410ed[m HEAD@{58}: checkout: moving from duylam to lam
+[33me798f0e[m HEAD@{59}: commit: mes
+[33mb80b4c8[m HEAD@{60}: checkout: moving from lam to duylam
+[33m07410ed[m HEAD@{61}: checkout: moving from HuuLoc to lam
+[33m07a9a64[m[33m ([m[1;32mHuuLoc[m[33m)[m HEAD@{62}: checkout: moving from lam to HuuLoc
+[33m07410ed[m HEAD@{63}: checkout: moving from duylam to lam
+[33mb80b4c8[m HEAD@{64}: commit: css header
+[33m36ef6f7[m HEAD@{65}: checkout: moving from lam to duylam
+[33m07410ed[m HEAD@{66}: checkout: moving from duylam to lam
+[33m36ef6f7[m HEAD@{67}: checkout: moving from lam to duylam
+[33m07410ed[m HEAD@{68}: checkout: moving from duylam to lam
+[33m36ef6f7[m HEAD@{69}: commit: them sua xoa
+[33mef08492[m HEAD@{70}: commit: mvc test
+[33me74c34d[m HEAD@{71}: commit: add php mailer
+[33ma56ae0f[m HEAD@{72}: checkout: moving from HuuLoc to duylam
+[33m07a9a64[m[33m ([m[1;32mHuuLoc[m[33m)[m HEAD@{73}: checkout: moving from duylam to HuuLoc
+[33ma56ae0f[m HEAD@{74}: checkout: moving from lam to duylam
+[33m07410ed[m HEAD@{75}: checkout: moving from kiet to lam
+[33m3ddee02[m HEAD@{76}: pull: Fast-forward
+[33m0036e27[m HEAD@{77}: checkout: moving from main to kiet
+[33m6a5c172[m[33m ([m[1;32mmain[m[33m)[m HEAD@{78}: checkout: moving from kiet to main
+[33m0036e27[m HEAD@{79}: checkout: moving from main to kiet
+[33m6a5c172[m[33m ([m[1;32mmain[m[33m)[m HEAD@{80}: commit (merge): lam
+[33mbdbe64f[m HEAD@{81}: checkout: moving from kiet to main
+[33m0036e27[m HEAD@{82}: checkout: moving from duylam to kiet
+[33ma56ae0f[m HEAD@{83}: checkout: moving from kiet to duylam
+[33m0036e27[m HEAD@{84}: checkout: moving from duylam to kiet
+[33ma56ae0f[m HEAD@{85}: commit: lam commit
+[33mbdbe64f[m HEAD@{86}: checkout: moving from lam to duylam
+[33m07410ed[m HEAD@{87}: checkout: moving from duylam to lam
+[33mbdbe64f[m HEAD@{88}: checkout: moving from main to duylam
+[33mbdbe64f[m HEAD@{89}: checkout: moving from kiet to main
+[33m0036e27[m HEAD@{90}: checkout: moving from main to kiet
+[33mbdbe64f[m HEAD@{91}: checkout: moving from duylam to main
+[33mbdbe64f[m HEAD@{92}: checkout: moving from main to duylam
+[33mbdbe64f[m HEAD@{93}: checkout: moving from kiet to main
+[33m0036e27[m HEAD@{94}: checkout: moving from main to kiet
+[33mbdbe64f[m HEAD@{95}: commit: lam
+[33m0036e27[m HEAD@{96}: clone: from https://github.com/lamkbvn/WEB2.git

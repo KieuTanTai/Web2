@@ -1,6 +1,5 @@
 {
-    "name": "web2/dynamic",
-    "description": "My PHP Project",
-    "require": {}
- }
- 
+    "require": {
+        "google/apiclient": "^2.15"
+    }
+}

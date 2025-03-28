@@ -49,6 +49,6 @@ public/uploads/
 *.sql
 *.sqlite
 *.db
-
+includes/login_orther.php
 # Ignore các package lock files (tùy chọn)
 composer.lock

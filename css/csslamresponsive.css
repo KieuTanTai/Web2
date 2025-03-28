@@ -1,0 +1,332 @@
+@media screen and (min-width: 1177px) {
+    .display-none-pc {
+        display: none;
+    }
+    .display-block-pc {
+        display: block;
+    }
+}
+
+@media screen and (max-width: 1176px) {
+    body {
+        position: relative;
+    }
+    /* chung */
+    .display-none-mobile {
+        display: none;
+    }
+
+    .display-block-mobile {
+        display: block;
+    }
+
+    .container {
+        max-width: 1176px;
+        max-width: calc(100% - 48px);
+        margin: 0 auto;
+    }
+
+    /* nav */
+
+    .nav--mobile {
+        position: sticky;
+        top: 0; /* hoặc bất kỳ giá trị cụ thể nào bạn muốn */
+        background: #fff;
+        z-index: 10000;
+    }
+
+    .nav-top--find {
+        display: none;
+    }
+
+    .carticon-mobile {
+        width: 30px;
+        height: 30px;
+    }
+
+    .nav-top--toggle-icon {
+        width: 40px;
+    }
+
+    .header-mobile {
+        background: linear-gradient(
+            180deg,
+            #ff5b00,
+            #ff5b00 52.57%,
+            rgba(255, 91, 0, 0) 95%,
+            rgba(255, 91, 0, 0)
+        );
+    }
+
+    .header-mobile--inner {
+    }
+
+    .header-mobile-find {
+        position: relative;
+        padding-top: 20px;
+    }
+
+    .find-mobile-icon {
+        width: 20px;
+        position: absolute;
+        top: 26px;
+        left: 12px;
+    }
+
+    .find-mobile-input {
+        width: calc(100% - 42px);
+        height: 30px;
+        padding-left: 40px;
+        border-radius: 50px;
+        border: none;
+    }
+
+    .header-mobile--category {
+    }
+
+    .header-mobile--list {
+        margin-top: 20px;
+        background: white;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        align-items: center;
+        padding: 20px 20px 0px 20px;
+        border-radius: 20px;
+        z-index: 2;
+        box-shadow: 0 4px 12px 0 rgba(0, 0, 0, 0.08);
+    }
+
+    .header-mobile--item {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        width: calc(33.33% - 10px);
+        margin-bottom: 20px;
+    }
+
+    .header-mobile--item-icon {
+    }
+
+    .header-mobile--item-title {
+        font-size: 12px;
+        text-align: center;
+        margin-top: 5px;
+    }
+
+    .toggle-nav {
+        position: absolute;
+        background: white;
+        z-index: 20;
+    }
+
+    .toggle-nav--inner {
+    }
+
+    .toggle-nav--list {
+        padding: 20px;
+        padding-bottom: 200px;
+    }
+
+    .toggle-nav--item {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        gap: 10px;
+        padding: 10px 0;
+        border-bottom: 1px solid #ccc;
+    }
+
+    .toggle-nav--icon {
+    }
+
+    .toggle-nav-title {
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 20;
+    }
+
+    .attractive-offer--inner {
+        overflow-x: auto;
+        white-space: nowrap; /* Ngăn các phần tử trong ul chuyển xuống hàng mới */
+    }
+
+    .attractive-offer--list {
+        display: inline-block; /* Hiển thị các phần tử li theo chiều ngang */
+    }
+
+    .attractive-offer--item {
+        pointer-events: none;
+        display: inline-block; /* Hiển thị các phần tử li theo chiều ngang */
+        vertical-align: top; /* Đảm bảo các phần tử li căn lề đầu dòng */
+        margin-right: 10px; /* Khoảng cách giữa các phần tử li */
+    }
+
+    /* Ẩn thanh cuộn trình duyệt Chrome và Safari */
+    .attractive-offer--inner::-webkit-scrollbar {
+        display: none;
+    }
+
+    /*  */
+
+    .blog-page--list {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .blog-page--item {
+        pointer-events: none;
+        vertical-align: top;
+        width: 100%;
+        flex-direction: row-reverse;
+        padding: 10px 0;
+        padding-left: 20px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+    }
+
+    .blog-page--img {
+        width: 180px;
+        height: 150px;
+    }
+
+    .blog-page--info {
+        display: flex;
+        justify-content: center;
+        align-items: flex-start;
+        flex-direction: column;
+    }
+
+    .blog-page--heading {
+        font-size: 16px;
+        font-weight: 600;
+        line-height: 1.5;
+    }
+
+    .blog-page--desc {
+        font-size: 12px;
+        font-weight: 400;
+        line-height: 1.5;
+        margin-top: 8px;
+        text-align: start;
+    }
+
+    .blog-page--inner::-webkit-scrollbar {
+        display: none;
+    }
+
+    .why-choose-klook--list {
+        display: flex; /* Sử dụng flexbox */
+        overflow-x: auto; /* Cho phép thanh cuộn ngang khi cần */
+    }
+
+    .why-choose-klook--item {
+        flex: 0 0 auto; /* Không cho phần tử tự động mở rộng khi không đủ không gian */
+        margin-right: 20px; /* Khoảng cách giữa các mục */
+    }
+
+    .why-choose-klook--item:last-child {
+        margin-right: 0; /* Loại bỏ margin bên phải của phần tử cuối cùng */
+    }
+
+    /* Ẩn thanh cuộn trình duyệt Chrome và Safari */
+    .why-choose-klook--list::-webkit-scrollbar {
+        display: none;
+    }
+
+    /* .blog-page--inner::-webkit-scrollbar {
+        display: none;
+    } */
+
+    .go-where--inner {
+        overflow-x: auto; /* Tạo thanh cuộn ngang khi nội dung vượt quá */
+    }
+
+    .go-where--list {
+        display: inline-block; /* Hiển thị các phần tử con theo chiều ngang */
+        white-space: nowrap; /* Ngăn các phần tử con chuyển xuống hàng mới */
+    }
+
+    .go-where--item {
+        pointer-events: none;
+        display: inline-block; /* Hiển thị các phần tử con theo chiều ngang */
+        vertical-align: top; /* Đảm bảo các phần tử con căn lề đầu dòng */
+        margin-right: 20px; /* Khoảng cách giữa các phần tử con */
+        white-space: wrap; /* Ngăn các phần tử con chuyển xuống hàng mới */
+    }
+
+    /* Ẩn thanh cuộn trình duyệt Chrome và Safari */
+    .go-where--inner::-webkit-scrollbar {
+        display: none;
+    }
+
+    .highlighted-activities--inner {
+        overflow-x: auto; /* Tạo thanh cuộn ngang khi nội dung vượt quá */
+    }
+
+    .highlighted-activities--list {
+        display: flex; /* Hiển thị các phần tử con theo chiều ngang */
+    }
+
+    .highlighted-activities--item {
+        pointer-events: none;
+        display: inline-block; /* Hiển thị các phần tử con theo chiều ngang */
+        vertical-align: top; /* Đảm bảo các phần tử con căn lề đầu dòng */
+        margin-right: 20px; /* Khoảng cách giữa các phần tử con */
+    }
+
+    /* Ẩn thanh cuộn trình duyệt Chrome và Safari */
+    .highlighted-activities--inner::-webkit-scrollbar {
+        display: none;
+    }
+
+    .experience-for-all--list {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .experience-for-all--item {
+        pointer-events: none;
+    }
+
+    .list--hot {
+        flex-direction: column;
+        gap: 10px;
+    }
+
+    .product-hot-item {
+        width: 100%;
+        pointer-events: none;
+    }
+
+    .footer {
+        padding: 0px;
+    }
+
+    .footer--list {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+
+    .footer--item {
+        margin: 18px 0;
+    }
+
+    .explorer-collection--info {
+        margin-left: 0;
+    }
+}

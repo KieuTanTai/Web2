@@ -1,0 +1,636 @@
+-- phpMyAdmin SQL Dump
+-- version 5.2.1
+-- https://www.phpmyadmin.net/
+--
+-- Host: localhost
+-- Generation Time: May 01, 2024 at 09:35 AM
+-- Server version: 10.4.28-MariaDB
+-- PHP Version: 8.2.4
+
+SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
+START TRANSACTION;
+SET time_zone = "+00:00";
+
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+
+--
+-- Database: `test`
+--
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `BackupOption`
+--
+
+CREATE TABLE `BackupOption` (
+  `OptionID` int(10) UNSIGNED NOT NULL,
+  `BackupQuestionID` int(10) UNSIGNED DEFAULT NULL,
+  `Title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `BackupOption`
+--
+
+INSERT INTO `BackupOption` (`OptionID`, `BackupQuestionID`, `Title`) VALUES
+(9, 1, 'Vật ở trạng thái nghỉ thì giữ nguyên trạng thái, vật ở trạng thái chuyển động thì giữ nguyên tốc độ và hướng chuyển động cho đến khi bị một lực không cân bằng ảnh hưởng.'),
+(10, 1, 'Lực bằng khối lượng nhân gia tốc.'),
+(11, 1, 'Với mỗi hành động, có một phản ứng tương đương và trái chiều.'),
+(12, 1, 'Không có phản ứng nào đúng'),
+(13, 2, 'Gồ ghề đôi'),
+(14, 2, 'Gồ ghề đơn'),
+(15, 2, 'Gồ ghề ba'),
+(16, 2, 'Không gồ ghề');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `BackupQuestion`
+--
+
+CREATE TABLE `BackupQuestion` (
+  `BackupQuestionID` int(10) UNSIGNED NOT NULL,
+  `QuestionID` int(10) UNSIGNED DEFAULT NULL,
+  `Title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Point` decimal(5,2) NOT NULL,
+  `CorrectAnswer` int(10) UNSIGNED NOT NULL
+) ;
+
+--
+-- Dumping data for table `BackupQuestion`
+--
+
+INSERT INTO `BackupQuestion` (`BackupQuestionID`, `QuestionID`, `Title`, `Point`, `CorrectAnswer`) VALUES
+(1, 1, 'Định luật Newton thứ nhất là gì?', 10.00, 1),
+(2, 2, 'Cấu trúc của DNA như thế nào?', 10.00, 2);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Employee`
+--
+
+CREATE TABLE `Employee` (
+  `EmployeeID` int(10) UNSIGNED NOT NULL,
+  `FirstName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `LastName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Phone` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Isdeleted` tinyint(1) DEFAULT 0,
+  `DateOfBirth` date NOT NULL,
+  `Gender` tinyint(1) NOT NULL,
+  `Password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `RoleID` smallint(5) UNSIGNED DEFAULT NULL,
+  `MajorID` smallint(5) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `Employee`
+--
+
+INSERT INTO `Employee` (`EmployeeID`, `FirstName`, `LastName`, `Phone`, `Email`, `Isdeleted`, `DateOfBirth`, `Gender`, `Password`, `RoleID`, `MajorID`) VALUES
+(1, 'Hoàng', 'Phạm', '1111111111', 'hoang.pham@example.com', 0, '1980-01-01', 1, 'hoang_password', 1, NULL),
+(2, 'Lan', 'Võ', '2222222222', 'lan.vo@example.com', 0, '1985-01-01', 0, 'lan_password', 2, 1),
+(3, 'Nam', 'Nguyễn', '3333333333', 'nam.nguyen@example.com', 0, '1990-01-01', 1, 'nam_password', 1, 2),
+(4, 'Hoàng', 'Phạm', '1111111111', 'hoang.pham@example.com', 0, '1980-01-01', 1, 'hoang_password', 1, NULL);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Exam`
+--
+
+CREATE TABLE `Exam` (
+  `ExamID` int(10) UNSIGNED NOT NULL,
+  `Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `DateStart` datetime NOT NULL,
+  `DateEnd` datetime NOT NULL,
+  `Status` enum('NOT_STARTED','IN_PROGRESS','COMPLETED') NOT NULL,
+  `isDeleted` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `Exam`
+--
+
+INSERT INTO `Exam` (`ExamID`, `Name`, `DateStart`, `DateEnd`, `Status`, `isDeleted`) VALUES
+(1, 'Kiểm tra giữa kì', '2024-04-01 00:00:00', '2024-04-19 00:00:00', 'COMPLETED', 0),
+(2, 'Kiểm tra cuối kỳ', '2024-05-15 13:00:00', '2024-05-15 15:00:00', 'NOT_STARTED', 0),
+(7, 'tâm như', '2024-05-10 00:00:00', '2024-05-11 00:00:00', 'COMPLETED', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Major`
+--
+
+CREATE TABLE `Major` (
+  `MajorID` smallint(5) UNSIGNED NOT NULL,
+  `Isdeleted` tinyint(1) DEFAULT 0,
+  `Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Description` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `Major`
+--
+
+INSERT INTO `Major` (`MajorID`, `Isdeleted`, `Name`, `Description`) VALUES
+(1, 0, 'Khoa Toán - Tin học', 'Mô tả về khoa Toán - Tin học'),
+(2, 0, 'Khoa Kỹ thuật Điện - Điện tử', 'Mô tả về khoa Kỹ thuật Điện - Điện tử'),
+(3, 0, 'Khoa Khoa học Tự nhiên', 'Mô tả về khoa Khoa học Tự Nhiên'),
+(7, 0, 'tâm như', 'xinh đẹp');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Option`
+--
+
+CREATE TABLE `Option` (
+  `OptionID` int(10) UNSIGNED NOT NULL,
+  `QuestionID` int(10) UNSIGNED DEFAULT NULL,
+  `Title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `isDeleted` int(11) NOT NULL DEFAULT 0
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `Option`
+--
+
+INSERT INTO `Option` (`OptionID`, `QuestionID`, `Title`, `isDeleted`) VALUES
+(1, 1, 'Vật ở trạng thái nghỉ thì giữ nguyên trạng thái, vật ở trạng thái chuyển động thì giữ nguyên tốc độ và hướng chuyển động cho đến khi bị một lực không cân bằng ảnh hưởng.', 0),
+(2, 1, 'Lực bằng khối lượng nhân gia tốc.', 0),
+(3, 1, 'Với mỗi hành động, có một phản ứng tương đương và trái chiều.', 0),
+(4, 1, 'Không có phản ứng nào đúng', 0),
+(5, 2, 'Gồ ghề đôi', 0),
+(6, 2, 'Gồ ghề đơn', 0),
+(7, 2, 'Gồ ghề ba', 0),
+(8, 2, 'Không gồ ghề', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Question`
+--
+
+CREATE TABLE `Question` (
+  `QuestionID` int(10) UNSIGNED NOT NULL,
+  `Title` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Point` decimal(5,2) NOT NULL,
+  `CorrectAnswer` int(10) UNSIGNED NOT NULL,
+  `EmployeeID` int(10) UNSIGNED DEFAULT NULL,
+  `SubjectID` int(10) UNSIGNED NOT NULL,
+  `Level` enum('EASY','MEDIUM','HARD') NOT NULL,
+  `isDeleted` int(11) NOT NULL DEFAULT 0
+) ;
+
+--
+-- Dumping data for table `Question`
+--
+
+INSERT INTO `Question` (`QuestionID`, `Title`, `Point`, `CorrectAnswer`, `EmployeeID`, `SubjectID`, `Level`, `isDeleted`) VALUES
+(1, 'Định luật Newton thứ nhất là gì?', 10.00, 1, 2, 1, 'EASY', 0),
+(2, 'Cấu trúc của DNA như thế nào?', 10.00, 6, 2, 2, 'MEDIUM', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Result`
+--
+
+CREATE TABLE `Result` (
+  `ResultID` int(10) UNSIGNED NOT NULL,
+  `StudentID` int(10) UNSIGNED NOT NULL,
+  `TestID` int(10) UNSIGNED NOT NULL,
+  `TotalCorrect` tinyint(3) UNSIGNED NOT NULL,
+  `TotalIncorrect` tinyint(3) UNSIGNED NOT NULL,
+  `TotalPoint` decimal(5,2) DEFAULT 0.00,
+  `Status` enum('PENDING','IN_PROGRESS','COMPLETED') NOT NULL,
+  `DateStartParticipate` datetime DEFAULT NULL,
+  `DateEndParticipate` datetime DEFAULT NULL
+) ;
+
+--
+-- Dumping data for table `Result`
+--
+
+INSERT INTO `Result` (`ResultID`, `StudentID`, `TestID`, `TotalCorrect`, `TotalIncorrect`, `TotalPoint`, `Status`, `DateStartParticipate`, `DateEndParticipate`) VALUES
+(1, 1, 1, 1, 0, 10.00, 'COMPLETED', '2024-03-15 07:31:00', '2024-03-16 08:50:00'),
+(2, 2, 2, 1, 0, 10.00, 'COMPLETED', '2024-03-15 07:30:50', '2024-03-15 09:00:00');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `ResultDetails`
+--
+
+CREATE TABLE `ResultDetails` (
+  `ResultID` int(10) UNSIGNED NOT NULL,
+  `BackupQuestionID` int(10) UNSIGNED NOT NULL,
+  `CorrectAnswer` int(10) UNSIGNED NOT NULL,
+  `CorrectAnswerTitle` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `ChooseOption` int(10) UNSIGNED NOT NULL,
+  `ChooseOptionTitle` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Point` decimal(5,2) NOT NULL
+) ;
+
+--
+-- Dumping data for table `ResultDetails`
+--
+
+INSERT INTO `ResultDetails` (`ResultID`, `BackupQuestionID`, `CorrectAnswer`, `CorrectAnswerTitle`, `ChooseOption`, `ChooseOptionTitle`, `Point`) VALUES
+(1, 1, 1, 'Vật ở trạng thái nghỉ thì giữ nguyên trạng thái, vật ở trạng thái chuyển động thì giữ nguyên tốc độ và hướng chuyển động cho đến khi bị một lực không cân bằng ảnh hưởng.', 1, 'Vật ở trạng thái nghỉ thì giữ nguyên trạng thái, vật ở trạng thái chuyển động thì giữ nguyên tốc độ và hướng chuyển động cho đến khi bị một lực không cân bằng ảnh hưởng.', 10.00),
+(2, 2, 5, 'Gồ ghề đôi', 5, 'Gồ ghề đôi', 10.00);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Role`
+--
+
+CREATE TABLE `Role` (
+  `RoleID` smallint(5) UNSIGNED NOT NULL,
+  `Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Description` text DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `Role`
+--
+
+INSERT INTO `Role` (`RoleID`, `Name`, `Description`) VALUES
+(1, 'Giảng viên', 'Role dành cho giảng viên'),
+(2, 'Admin', 'Role dành cho quản trị viên');
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Student`
+--
+
+CREATE TABLE `Student` (
+  `StudentID` int(10) UNSIGNED NOT NULL,
+  `FirstName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `LastName` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Phone` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Email` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Password` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Isdeleted` tinyint(1) DEFAULT 0,
+  `DateOfBirth` date NOT NULL,
+  `Gender` tinyint(1) NOT NULL,
+  `MajorID` smallint(5) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `Student`
+--
+
+INSERT INTO `Student` (`StudentID`, `FirstName`, `LastName`, `Phone`, `Email`, `Password`, `Isdeleted`, `DateOfBirth`, `Gender`, `MajorID`) VALUES
+(1, 'Anh', 'Nguyễn', '1234567890', 'anh.nguyen@example.com', '12345', 0, '2002-03-15', 1, 1),
+(2, 'Linh', 'Trần', '9876543210', 'linh.tran@example.com', '12345', 0, '2003-05-20', 0, 2),
+(3, 'Thành', 'Lê', '5555555555', 'thanh.le@example.com', '12345', 0, '2001-08-10', 1, 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Subject`
+--
+
+CREATE TABLE `Subject` (
+  `SubjectID` int(10) UNSIGNED NOT NULL,
+  `Name` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `Isdeleted` tinyint(1) DEFAULT 0,
+  `Description` text DEFAULT NULL,
+  `MajorID` smallint(5) UNSIGNED DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `Subject`
+--
+
+INSERT INTO `Subject` (`SubjectID`, `Name`, `Isdeleted`, `Description`, `MajorID`) VALUES
+(1, 'Toán cao cấp', 0, 'Môn học về toán cao cấp', 1),
+(2, 'Lập trình Java', 0, 'Môn học về lập trình Java', 2),
+(3, 'Vật lý cơ bản', 0, 'Môn học về vật lý cơ bản', 3),
+(7, 'Toán cao cấp', 0, 'Môn học về toán cao cấp', 1),
+(8, 'Lập trình Java', 0, 'Môn học về lập trình Java', 2),
+(9, 'Vật lý cơ bản', 0, 'Môn học về vật lý cơ bản', 3);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `Test`
+--
+
+CREATE TABLE `Test` (
+  `TestID` int(10) UNSIGNED NOT NULL,
+  `ExamID` int(10) UNSIGNED NOT NULL,
+  `SubjectID` int(10) UNSIGNED NOT NULL,
+  `EmployeeID` int(10) UNSIGNED DEFAULT NULL,
+  `NumberOfQuestion` tinyint(3) UNSIGNED NOT NULL,
+  `TotalPoint` decimal(5,2) DEFAULT 0.00,
+  `Duration` varchar(100) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL,
+  `DateStart` datetime NOT NULL,
+  `DateEnd` datetime NOT NULL,
+  `Status` enum('NOT_STARTED','IN_PROGRESS','COMPLETED') NOT NULL,
+  `Description` text DEFAULT NULL,
+  `isDeleted` int(11) NOT NULL DEFAULT 0
+) ;
+
+--
+-- Dumping data for table `Test`
+--
+
+INSERT INTO `Test` (`TestID`, `ExamID`, `SubjectID`, `EmployeeID`, `NumberOfQuestion`, `TotalPoint`, `Duration`, `DateStart`, `DateEnd`, `Status`, `Description`, `isDeleted`) VALUES
+(1, 2, 1, 3, 1, 10.00, '01:30:00', '2024-03-15 07:30:00', '2024-03-15 09:00:00', 'COMPLETED', 'Bài thi không được sử dụng tài liệu, sinh viên tham gia vào zoom bật camera đầy đủ để giám khảo theo dõi quá trình làm bài', 0),
+(2, 2, 2, 2, 1, 10.00, '01:30:00', '2024-03-15 07:30:00', '2024-03-15 09:00:00', 'COMPLETED', 'Bài thi được sử dụng tài liệu giấy, sách', 0),
+(3, 2, 1, 3, 1, 10.00, '01:30:00', '2024-03-15 07:30:00', '2024-03-15 09:00:00', 'COMPLETED', 'Bài thi không được sử dụng tài liệu, sinh viên tham gia vào zoom bật camera đầy đủ để giám khảo theo dõi quá trình làm bài', 0),
+(13, 2, 1, 3, 1, 10.00, '01:30:00', '2024-03-15 07:30:00', '2024-03-15 09:00:00', 'COMPLETED', 'Bài thi không được sử dụng tài liệu, sinh viên tham gia vào zoom bật camera đầy đủ để giám khảo theo dõi quá trình làm bài', 0),
+(14, 2, 2, 2, 1, 10.00, '01:30:00', '2024-03-15 07:30:00', '2024-03-15 09:00:00', 'COMPLETED', 'Bài thi được sử dụng tài liệu giấy, sách', 0);
+
+-- --------------------------------------------------------
+
+--
+-- Table structure for table `TestDetails`
+--
+
+CREATE TABLE `TestDetails` (
+  `TestID` int(10) UNSIGNED NOT NULL,
+  `BackupQuestionID` int(10) UNSIGNED NOT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+
+--
+-- Dumping data for table `TestDetails`
+--
+
+INSERT INTO `TestDetails` (`TestID`, `BackupQuestionID`) VALUES
+(1, 1),
+(2, 2);
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `BackupOption`
+--
+ALTER TABLE `BackupOption`
+  ADD PRIMARY KEY (`OptionID`),
+  ADD KEY `BackupQuestionID` (`BackupQuestionID`);
+
+--
+-- Indexes for table `BackupQuestion`
+--
+ALTER TABLE `BackupQuestion`
+  ADD PRIMARY KEY (`BackupQuestionID`),
+  ADD KEY `QuestionID` (`QuestionID`);
+
+--
+-- Indexes for table `Employee`
+--
+ALTER TABLE `Employee`
+  ADD PRIMARY KEY (`EmployeeID`),
+  ADD KEY `MajorID` (`MajorID`),
+  ADD KEY `RoleID` (`RoleID`);
+
+--
+-- Indexes for table `Exam`
+--
+ALTER TABLE `Exam`
+  ADD PRIMARY KEY (`ExamID`);
+
+--
+-- Indexes for table `Major`
+--
+ALTER TABLE `Major`
+  ADD PRIMARY KEY (`MajorID`);
+
+--
+-- Indexes for table `Option`
+--
+ALTER TABLE `Option`
+  ADD PRIMARY KEY (`OptionID`),
+  ADD KEY `QuestionID` (`QuestionID`);
+
+--
+-- Indexes for table `Question`
+--
+ALTER TABLE `Question`
+  ADD PRIMARY KEY (`QuestionID`),
+  ADD KEY `EmployeeID` (`EmployeeID`),
+  ADD KEY `SubjectID` (`SubjectID`);
+
+--
+-- Indexes for table `Result`
+--
+ALTER TABLE `Result`
+  ADD PRIMARY KEY (`ResultID`),
+  ADD UNIQUE KEY `unique_exam_per_student` (`StudentID`,`TestID`),
+  ADD KEY `TestID` (`TestID`);
+
+--
+-- Indexes for table `ResultDetails`
+--
+ALTER TABLE `ResultDetails`
+  ADD UNIQUE KEY `unique_resultdetails` (`ResultID`,`BackupQuestionID`),
+  ADD KEY `BackupQuestionID` (`BackupQuestionID`);
+
+--
+-- Indexes for table `Role`
+--
+ALTER TABLE `Role`
+  ADD PRIMARY KEY (`RoleID`);
+
+--
+-- Indexes for table `Student`
+--
+ALTER TABLE `Student`
+  ADD PRIMARY KEY (`StudentID`),
+  ADD KEY `MajorID` (`MajorID`);
+
+--
+-- Indexes for table `Subject`
+--
+ALTER TABLE `Subject`
+  ADD PRIMARY KEY (`SubjectID`),
+  ADD KEY `MajorID` (`MajorID`);
+
+--
+-- Indexes for table `Test`
+--
+ALTER TABLE `Test`
+  ADD PRIMARY KEY (`TestID`),
+  ADD KEY `ExamID` (`ExamID`),
+  ADD KEY `SubjectID` (`SubjectID`),
+  ADD KEY `EmployeeID` (`EmployeeID`);
+
+--
+-- Indexes for table `TestDetails`
+--
+ALTER TABLE `TestDetails`
+  ADD UNIQUE KEY `unique_testdetails` (`TestID`,`BackupQuestionID`),
+  ADD KEY `BackupQuestionID` (`BackupQuestionID`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `BackupOption`
+--
+ALTER TABLE `BackupOption`
+  MODIFY `OptionID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `BackupQuestion`
+--
+ALTER TABLE `BackupQuestion`
+  MODIFY `BackupQuestionID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `Employee`
+--
+ALTER TABLE `Employee`
+  MODIFY `EmployeeID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=19;
+
+--
+-- AUTO_INCREMENT for table `Exam`
+--
+ALTER TABLE `Exam`
+  MODIFY `ExamID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `Major`
+--
+ALTER TABLE `Major`
+  MODIFY `MajorID` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=8;
+
+--
+-- AUTO_INCREMENT for table `Option`
+--
+ALTER TABLE `Option`
+  MODIFY `OptionID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=17;
+
+--
+-- AUTO_INCREMENT for table `Question`
+--
+ALTER TABLE `Question`
+  MODIFY `QuestionID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `Result`
+--
+ALTER TABLE `Result`
+  MODIFY `ResultID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `Role`
+--
+ALTER TABLE `Role`
+  MODIFY `RoleID` smallint(5) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
+
+--
+-- AUTO_INCREMENT for table `Student`
+--
+ALTER TABLE `Student`
+  MODIFY `StudentID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `Subject`
+--
+ALTER TABLE `Subject`
+  MODIFY `SubjectID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
+
+--
+-- AUTO_INCREMENT for table `Test`
+--
+ALTER TABLE `Test`
+  MODIFY `TestID` int(10) UNSIGNED NOT NULL AUTO_INCREMENT;
+
+--
+-- Constraints for dumped tables
+--
+
+--
+-- Constraints for table `BackupOption`
+--
+ALTER TABLE `BackupOption`
+  ADD CONSTRAINT `BackupOption_ibfk_1` FOREIGN KEY (`BackupQuestionID`) REFERENCES `BackupQuestion` (`BackupQuestionID`);
+
+--
+-- Constraints for table `BackupQuestion`
+--
+ALTER TABLE `BackupQuestion`
+  ADD CONSTRAINT `BackupQuestion_ibfk_1` FOREIGN KEY (`QuestionID`) REFERENCES `Question` (`QuestionID`);
+
+--
+-- Constraints for table `Employee`
+--
+ALTER TABLE `Employee`
+  ADD CONSTRAINT `Employee_ibfk_1` FOREIGN KEY (`MajorID`) REFERENCES `Major` (`MajorID`),
+  ADD CONSTRAINT `Employee_ibfk_2` FOREIGN KEY (`RoleID`) REFERENCES `Role` (`RoleID`);
+
+--
+-- Constraints for table `Option`
+--
+ALTER TABLE `Option`
+  ADD CONSTRAINT `Option_ibfk_1` FOREIGN KEY (`QuestionID`) REFERENCES `Question` (`QuestionID`);
+
+--
+-- Constraints for table `Question`
+--
+ALTER TABLE `Question`
+  ADD CONSTRAINT `Question_ibfk_1` FOREIGN KEY (`EmployeeID`) REFERENCES `Employee` (`EmployeeID`),
+  ADD CONSTRAINT `Question_ibfk_2` FOREIGN KEY (`SubjectID`) REFERENCES `Subject` (`SubjectID`);
+
+--
+-- Constraints for table `Result`
+--
+ALTER TABLE `Result`
+  ADD CONSTRAINT `Result_ibfk_1` FOREIGN KEY (`StudentID`) REFERENCES `Student` (`StudentID`),
+  ADD CONSTRAINT `Result_ibfk_2` FOREIGN KEY (`TestID`) REFERENCES `Test` (`TestID`);
+
+--
+-- Constraints for table `ResultDetails`
+--
+ALTER TABLE `ResultDetails`
+  ADD CONSTRAINT `ResultDetails_ibfk_1` FOREIGN KEY (`ResultID`) REFERENCES `Result` (`ResultID`),
+  ADD CONSTRAINT `ResultDetails_ibfk_2` FOREIGN KEY (`BackupQuestionID`) REFERENCES `BackupQuestion` (`BackupQuestionID`);
+
+--
+-- Constraints for table `Student`
+--
+ALTER TABLE `Student`
+  ADD CONSTRAINT `Student_ibfk_1` FOREIGN KEY (`MajorID`) REFERENCES `Major` (`MajorID`);
+
+--
+-- Constraints for table `Subject`
+--
+ALTER TABLE `Subject`
+  ADD CONSTRAINT `Subject_ibfk_1` FOREIGN KEY (`MajorID`) REFERENCES `Major` (`MajorID`);
+
+--
+-- Constraints for table `Test`
+--
+ALTER TABLE `Test`
+  ADD CONSTRAINT `Test_ibfk_1` FOREIGN KEY (`ExamID`) REFERENCES `Exam` (`ExamID`),
+  ADD CONSTRAINT `Test_ibfk_2` FOREIGN KEY (`SubjectID`) REFERENCES `Subject` (`SubjectID`),
+  ADD CONSTRAINT `Test_ibfk_3` FOREIGN KEY (`EmployeeID`) REFERENCES `Employee` (`EmployeeID`);
+
+--
+-- Constraints for table `TestDetails`
+--
+ALTER TABLE `TestDetails`
+  ADD CONSTRAINT `TestDetails_ibfk_1` FOREIGN KEY (`TestID`) REFERENCES `Test` (`TestID`),
+  ADD CONSTRAINT `TestDetails_ibfk_2` FOREIGN KEY (`BackupQuestionID`) REFERENCES `BackupQuestion` (`BackupQuestionID`);
+COMMIT;
+
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

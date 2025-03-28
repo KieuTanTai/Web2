@@ -1,0 +1,35 @@
+body{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 16px;
+  font-family:Arial, Helvetica, sans-serif;
+}
+  
+.user {
+  max-width: 1160px; /* Thay đổi width thành max-width */
+  width: 90%; /* Thay đổi width thành 90% */
+  display: flex;
+  justify-content: center;
+  column-gap: 12px;
+  margin-top: 50px;
+}
+
+
+@media screen and (max-width: 620px) {
+  .user{
+    font-size:smaller;
+  }
+}
+
+.quay-lai-profile{
+  width: 95%;
+  font-style: bold;
+  color: blue;
+  cursor: pointer;
+}
+
+.quay-lai-profile svg{
+  vertical-align: center;
+}
+

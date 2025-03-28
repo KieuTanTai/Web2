@@ -1,0 +1,134 @@
+:root{
+  --primary-color : #ff5b00;
+  --secondary-color : #f6892a;
+  --third-color : #f6894e;
+  --end-color : #fff0e5;
+}
+  
+.user .side-bar-main {
+  width: 275px;
+  max-height: 750px; /* Thay đổi height thành max-height */
+  height: 100%; /* Thay đổi height thành 100% */
+  display: flex;
+  flex-direction: column;
+  border-radius: 10px;
+  box-shadow: -1px 5px 15px 0px rgb(227, 227, 227);
+}
+
+@media screen and (width <= 620px) {
+  .user .side-bar-main {
+    width: 400px;
+  }
+}
+
+.user .profile{
+  height: 250px ;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: linear-gradient(to bottom , #FF922E 5.85%, rgba(230, 156, 45, 0.964) 17.62%, rgba(246, 171, 55, 0.930042) 28.51%, rgba(232, 174, 81, 0.853668) 53.24%, rgba(233, 169, 67, 0.80631) 68.08%, rgba(233, 160, 40, 0.716166) 94.89%, rgba(236, 161, 34, 0.608662) 104.74%, rgba(240, 163, 27, 0.481827) 104.75%, rgba(244, 164, 20, 0.356436) 104.76%, rgba(248, 166, 12, 0.22) 104.77%, rgba(255, 255, 255, 0) 104.78%);
+  border-top-left-radius: 10px;
+  border-top-right-radius:10px ;
+}
+
+.user .profile .profile-image-user{
+  width: 85px;
+}
+
+.user .profile .profile-name-user{
+  width: 175px;
+  font-size: 20px;
+  text-align: center;
+}
+
+.user .profile .profile-edit-profile{
+  width: 95px;
+  display: inline;
+  cursor: pointer;
+  margin-top: 5px;
+}
+
+
+
+.user .profile .profile-edit-profile label{
+  color: rgb(28, 28, 255);
+  cursor: pointer;
+}
+
+.user .profile .profile-edit-profile .image-edit-profile{
+  height: 14px;
+  width: 14px;
+  vertical-align: middle;
+}
+
+
+.user .preferential{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  padding: 10px;
+}
+
+.user .preferential .them-ma-uu-dai{
+  float :right;
+}
+
+.user .preferential .count-credit{
+  float :right;
+  text-align: center;
+  height: 21.6px;
+  width: 21.6px;
+}
+
+
+.user .other{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  row-gap: 10px;
+  padding: 10px;
+}
+
+.user .setting{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    row-gap: 10px;
+    padding: 10px;
+}
+
+.user .line-black-light{
+  border-top: 1px solid rgb(186, 182, 182);
+}
+
+.user .muc{
+  padding: 8px;
+  cursor: pointer;
+}
+
+.user .muc label{
+  text-align: center;
+  cursor: pointer;
+} 
+.user .muc svg{
+  height: 21.6px;
+  width: 21.6px;
+  vertical-align: bottom;
+}
+
+a{
+  text-decoration: none;
+  color: black;
+}
+
+.user .muc:hover{
+  background-color: rgb(203, 202, 202);
+}
+
+
+.user .select-muc{
+  color: #ff5b00;
+  fill: #ff5b00;
+}

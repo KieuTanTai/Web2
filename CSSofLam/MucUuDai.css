@@ -1,0 +1,178 @@
+.mucUuDai-container {
+    width: 98%;
+    max-height: 600px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+}
+
+@media screen and (max-width: 620px) {
+    .mucUuDai-container {
+        padding: 4px;
+    }
+}
+
+.find-discount-group {
+    max-width: 500px;
+    width: 95%;
+    height: 40px;
+    display: flex;
+    margin-top: 20px;
+}
+
+.input-discount {
+    width: 70%;
+    padding: 12px;
+
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.btn-use {
+    width: 30%;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    background-color: var(--primary-color);
+    cursor: pointer;
+    color: aliceblue;
+}
+
+.nav-discount {
+    display: flex;
+    column-gap: 5px;
+    width: 95%;
+    margin-top: 30px;
+    font-weight: 600;
+}
+
+.hinhvuong {
+    width: 7px;
+    height: 22px;
+    background-color: var(--primary-color);
+    border-radius: 10px;
+}
+
+.nav-discount .textMuc {
+    font-size: 24px;
+}
+
+.nav-discount a {
+    text-decoration: none;
+}
+
+.no-find-discount {
+    margin-top: 80px;
+    width: 700px;
+}
+
+.no-find-discount .title-no-find1 {
+    text-align: center;
+    font-size: 18px;
+    font-weight: 600;
+}
+
+.no-find-discount .title-no-find2 {
+    text-align: center;
+}
+
+.find-discount {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+    column-gap: 10px;
+    margin-left: 5px;
+    overflow-y: auto;
+    margin: 40px 0px 0px 0px;
+}
+
+.discount-card {
+    max-width: 400px;
+    width: 95%;
+    max-height: 110px;
+    height: 24%;
+    border: 1px solid black;
+    border-radius: 10px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding: 5px 0px 5px 0px;
+}
+
+.infor-card-main {
+    color: rgb(255, 254, 254);
+}
+
+.infor-card {
+    width: 255px;
+    height: 85px;
+
+    border: 1px solid black;
+    padding: 10px;
+    border-radius: 8px;
+    border-right: none;
+
+    margin-left: 5px;
+
+    /* background-color: #ff5b00; */
+    background: linear-gradient(
+        272.65deg,
+        #ff922e 5.85%,
+        rgba(236, 164, 55, 0.963646) 17.62%,
+        rgba(246, 171, 55, 0.930042) 28.51%,
+        rgba(232, 174, 81, 0.853668) 53.24%,
+        rgba(233, 169, 67, 0.80631) 68.08%,
+        rgba(233, 160, 40, 0.716166) 94.89%,
+        rgba(236, 161, 34, 0.608662) 104.74%,
+        rgba(240, 163, 27, 0.481827) 104.75%,
+        rgba(244, 164, 20, 0.356436) 104.76%,
+        rgba(248, 166, 12, 0.22) 104.77%,
+        rgba(255, 168, 0, 0) 104.78%
+    );
+    display: flex;
+}
+
+.cac-hinh-tron {
+    position: relative;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+    left: -8px;
+    gap: 4px;
+}
+
+.hinhtron {
+    width: 15px;
+    height: 15px;
+
+    border-radius: 20px;
+    background-color: rgb(255, 255, 255);
+}
+
+.use-card {
+    width: 100px;
+    height: 80px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.btn-use-card {
+    background-color: #f08044;
+    border-radius: 10px;
+    cursor: pointer;
+    color: aliceblue;
+}
+.title-infor-card {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.pointer {
+    cursor: pointer;
+}

@@ -1,0 +1,98 @@
+.edit-profile-container{
+  padding : 40px 30px;
+}
+
+.edit-profile-infor{
+  font-size : 20px;
+  display: flex;
+  column-gap: 5px;
+  margin-bottom: 8px;
+}
+
+.hinhvuong{
+  width: 5px;
+  height: 20px;
+  background-color: var(--primary-color);
+  border-radius : 5px;
+}
+
+.edit-profile-infor-desc{
+  font-size: 14px;
+  color: #8a8a8a;
+}
+
+
+.muc-edit{
+  padding: 24px 0px;
+  border-bottom: 1px solid #eee;
+}
+
+.row1{
+  font-size: 14px;
+  display: flex;
+  justify-content: space-between;
+  line-height: 20px;
+}
+
+.chitiet-muc-edit{
+}
+
+.btn-on-edit{
+  cursor: pointer;
+  color: #2073f9;
+}
+
+.row3{
+  display: none;
+}
+
+.header-edit{
+  display: flex;
+  justify-content: space-between;
+}
+
+.textTen{
+  margin-left: 5px;
+}
+
+.header-edit-btn-off-edit{
+  cursor: pointer;
+  color: #2073f9;
+}
+
+.btn-luu{
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 80px;
+  height: 44px;
+  background-color: var(--primary-color);
+}
+
+.btn-kt{
+  margin-top: 10px;
+  border-radius: 10px;
+  width: 80px;
+  height: 44px;
+  background-color: var(--primary-color);
+  
+}
+.btn-kt::selection{
+}
+
+.content-edit input{
+    width: 345px;
+    height: 35px;
+    padding: 0 12px;
+    border-radius: 10px;
+}
+
+.quay-lai-profile{
+  width: 95%;
+  font-style: bold;
+  color: blue;
+  cursor: pointer;
+  margin : 10px 0px 0px 10px;
+}
+
+
+

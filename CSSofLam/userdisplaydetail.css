@@ -1,0 +1,19 @@
+.user .display-detail {
+  max-width: 855px;
+  width: 100%;
+  height: 100%;
+  border-radius: 10px;
+  box-shadow: -1px 5px 15px 0px rgb(227, 227, 227);
+}
+
+@media screen and (width <= 620px) {
+  .user .display-detail {
+    display: none;
+  }
+}
+
+@media screen and (width > 620px) {
+  .user .display-detail {
+    display: block;
+  }
+}

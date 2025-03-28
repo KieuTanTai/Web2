@@ -1,0 +1,128 @@
+@media (max-width: 1199.98px) {
+  .hidden_tablet_mobile {
+    display: none;
+  }
+  .big-image {
+    height: 200px;
+    background-color: #fff;
+    background-image: none;
+  }
+
+  .big-image .search-input {
+    height: auto;
+    width: 100%;
+    background-color: #f5f5f5;
+  }
+  .big-image .title {
+    font-size: 32px;
+    font-weight: 600;
+    color: #fff;
+    padding-top: 0;
+  }
+  h1.title {
+    display: none;
+  }
+  .big-image .icon {
+    position: absolute;
+    top: 24px;
+    left: 18px;
+  }
+  .big-image {
+    position: sticky;
+    top: 54px;
+    height: auto;
+    z-index: 3;
+  }
+  .big-image .container {
+    height: auto;
+  }
+  .list-product .container {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 22px;
+  }
+  .list-product .card .img-product {
+    height: 300px;
+  }
+  .page-navigation .pagination {
+    margin-top: 0;
+  }
+  .filter-row {
+    position: sticky;
+    top: 107px;
+    z-index: 3;
+  }
+  .nav {
+    box-shadow: none;
+  }
+  .nav-top {
+    border: 0;
+    box-shadow: none;
+  }
+  .filter-row .container {
+    padding: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 16px;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+  }
+  .list-product {
+    z-index: 100;
+  }
+  .quantity-sort {
+    position: sticky;
+    z-index: 2;
+  }
+  .nav-top--right__panner a {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .filter-advance {
+    transform: translate(-50%, 100%);
+  }
+
+  .filter-all.checked ~ .filter-advance {
+    opacity: 1;
+    visibility: visible;
+    transform: translate(-50%, -50%);
+  }
+  .filter-advance .icon-kill svg path {
+    stroke: #ff5b00;
+  }
+}
+@media (max-width: 778px) {
+  .hidden_tablet_mobile {
+    display: none;
+    opacity: 0;
+    visibility: hidden;
+  }
+  .list-product .container {
+    margin-top: 28px;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: 22px;
+  }
+  .list-product .card .img-product {
+    height: 250px;
+  }
+  .filter-advance {
+    width: auto;
+  }
+  .filter-advance .icon-kill svg path {
+    stroke: #ff5b00;
+  }
+  .wrapper-filter-all {
+    width: auto;
+    background: #fff;
+    border-radius: 10px;
+    padding: 20px 25px 20px;
+    top: 41px;
+  }
+  .price-input-all .separator-all {
+    width: auto;
+  }
+}
