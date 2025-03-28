@@ -9,7 +9,7 @@ $connect = new mysqli("localhost", "root", "", "web2");
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="View/showProductView/style.css?v=<?php echo time(); ?>">
   <link rel="stylesheet" href="View/showProductView/responsiveShowProductView.css?v=<?php echo time(); ?>">
-
+  <meta http-equiv="Content-Security-Policy" content="script-src 'self' 'unsafe-inline' https://code.jquery.com;">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.7.1/jquery.min.js"></script>
   <title>Klook</title>
 </head>
