@@ -43,7 +43,7 @@ function initializePage() {
     if (categoryId) {
         // Ẩn tất cả các section
         hideAllSections();
-
+        console.log("hello")
         // Hiển thị section mục tiêu
         showTargetSection(categoryId);
         // Lấy danh sách sản phẩm từ localStorage
